@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<RECIPES>
+    <RECIPE>
+        <NAME>No.10 - Endless Galaxy</NAME>
+        <VERSION>1</VERSION>
+        <TYPE>All Grain</TYPE>
+        <BREWER>Leon</BREWER>
+        <ASST_BREWER>Frans</ASST_BREWER>
+        <BATCH_SIZE>50.0000000</BATCH_SIZE>
+        <BOIL_SIZE>64.0000000</BOIL_SIZE>
+        <BOIL_TIME>75.0000000</BOIL_TIME>
+        <EFFICIENCY>80.0000000</EFFICIENCY>
+        <HOPS>
+            <HOP>
+                <NAME>Amarillo Gold</NAME>
+                <VERSION>1</VERSION>
+                <ORIGIN>U.S.</ORIGIN>
+                <ALPHA>8.5000000</ALPHA>
+                <AMOUNT>0.0300000</AMOUNT>
+                <USE>Boil</USE>
+                <TIME>75.0000000</TIME>
+                <NOTES>Unknown origin, but character similar to Cascade.  Used for both bitterness and aroma.
+                    Used for: IPAs, Ales
+                    Aroma: Citrus, flowery
+                    Substitutes: Cascade, Centennial</NOTES>
+                <TYPE>Aroma</TYPE>
+                <FORM>Pellet</FORM>
+                <BETA>6.0000000</BETA>
+                <HSI>20.0000000</HSI>
+                <DISPLAY_AMOUNT>30.00 g</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 g</INVENTORY>
+                <DISPLAY_TIME>75.0 min</DISPLAY_TIME>
+            </HOP>
+            <HOP>
+                <NAME>Columbus (Tomahawk)</NAME>
+                <VERSION>1</VERSION>
+                <ORIGIN>U.S.</ORIGIN>
+                <ALPHA>14.0000000</ALPHA>
+                <AMOUNT>0.1149999</AMOUNT>
+                <USE>Boil</USE>
+                <TIME>15.0000000</TIME>
+                <NOTES>Engineered Centennial Substitute - High alpha bittering hops.
+                    Used for: Bittering, flavor, aroma - IPA, American Pale Ale, Stout, Lager
+                    Aroma: Pungent, spicy. Strongly aromatic, but clean tasting bitterness
+                    Substitutes: Centennial</NOTES>
+                <TYPE>Bittering</TYPE>
+                <FORM>Pellet</FORM>
+                <BETA>5.0000000</BETA>
+                <HSI>40.0000000</HSI>
+                <DISPLAY_AMOUNT>115.00 g</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 g</INVENTORY>
+                <DISPLAY_TIME>15.0 min</DISPLAY_TIME>
+            </HOP>
+            <HOP>
+                <NAME>Columbus (Tomahawk)</NAME>
+                <VERSION>1</VERSION>
+                <ORIGIN>U.S.</ORIGIN>
+                <ALPHA>14.0000000</ALPHA>
+                <AMOUNT>0.1149999</AMOUNT>
+                <USE>Boil</USE>
+                <TIME>5.0000000</TIME>
+                <NOTES>Engineered Centennial Substitute - High alpha bittering hops.
+                    Used for: Bittering, flavor, aroma - IPA, American Pale Ale, Stout, Lager
+                    Aroma: Pungent, spicy. Strongly aromatic, but clean tasting bitterness
+                    Substitutes: Centennial</NOTES>
+                <TYPE>Bittering</TYPE>
+                <FORM>Pellet</FORM>
+                <BETA>5.0000000</BETA>
+                <HSI>40.0000000</HSI>
+                <DISPLAY_AMOUNT>115.00 g</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 g</INVENTORY>
+                <DISPLAY_TIME>5.0 min</DISPLAY_TIME>
+            </HOP>
+            <HOP>
+                <NAME>Columbus (Tomahawk)</NAME>
+                <VERSION>1</VERSION>
+                <ORIGIN>U.S.</ORIGIN>
+                <ALPHA>14.0000000</ALPHA>
+                <AMOUNT>0.1699999</AMOUNT>
+                <USE>Aroma</USE>
+                <TIME>0.0000000</TIME>
+                <NOTES>Engineered Centennial Substitute - High alpha bittering hops.
+                    Used for: Bittering, flavor, aroma - IPA, American Pale Ale, Stout, Lager
+                    Aroma: Pungent, spicy. Strongly aromatic, but clean tasting bitterness
+                    Substitutes: Centennial</NOTES>
+                <TYPE>Bittering</TYPE>
+                <FORM>Pellet</FORM>
+                <BETA>5.0000000</BETA>
+                <HSI>40.0000000</HSI>
+                <DISPLAY_AMOUNT>170.00 g</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 g</INVENTORY>
+                <DISPLAY_TIME>0.0 min</DISPLAY_TIME>
+            </HOP>
+        </HOPS>
+
+        <FERMENTABLES>
+            <FERMENTABLE>
+                <NAME>Maris Otter (Crisp)</NAME>
+                <VERSION>1</VERSION>
+                <TYPE>Grain</TYPE>
+                <AMOUNT>9.9999936</AMOUNT>
+                <YIELD>82.5000000</YIELD>
+                <COLOR>5.5000001</COLOR>
+                <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+                <ORIGIN>United Kingdom</ORIGIN>
+                <SUPPLIER>MaltMagnus.se</SUPPLIER>
+                <NOTES>Sorten Maris Otter &#228;r framodlad av Dr GDH Bell i Cambridge genom att korsa Proctor och Pioneer korn. Maris Otter har odlats f&#246;r m&#228;ltning mer &#228;n 45 &#229;r och dess stamtavla och meriter, levererar &#229;r efter &#229;r en konsekvent, bearbetbar och smakrik malt. Maris Otter anses vara Pale Ale maltens Rolls Royce.</NOTES>
+                <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+                <MOISTURE>2.8000000</MOISTURE>
+                <DIASTATIC_POWER>50.0000000</DIASTATIC_POWER>
+                <PROTEIN>11.7000000</PROTEIN>
+                <MAX_IN_BATCH>100.0000000</MAX_IN_BATCH>
+                <RECOMMEND_MASH>TRUE</RECOMMEND_MASH>
+                <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+                <DISPLAY_AMOUNT>10.00 kg</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 kg</INVENTORY>
+                <POTENTIAL>1.0379500</POTENTIAL>
+                <DISPLAY_COLOR>5.5 EBC</DISPLAY_COLOR>
+                <EXTRACT_SUBSTITUTE>Pale Liquid Extract</EXTRACT_SUBSTITUTE>
+            </FERMENTABLE>
+            <FERMENTABLE>
+                <NAME>Caraamber</NAME>
+                <VERSION>1</VERSION>
+                <TYPE>Grain</TYPE>
+                <AMOUNT>0.9999994</AMOUNT>
+                <YIELD>75.0000000</YIELD>
+                <COLOR>60.0000000</COLOR>
+                <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+                <ORIGIN>Germany</ORIGIN>
+                <SUPPLIER>Weyermann</SUPPLIER>
+                <NOTES>Detta &#228;r Weyermanns motsvarighet till &#34;Biscuit malt&#34;, som DeWolf-Cosyns tidigare tillverkade.
+                    Ger en vacker f&#228;rg med dragning &#229;t r&#246;tt till &#246;let. Anv&#228;nds upp till 20% av maltgivan.</NOTES>
+                <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+                <MOISTURE>4.0000000</MOISTURE>
+                <DIASTATIC_POWER>120.0000000</DIASTATIC_POWER>
+                <PROTEIN>11.7000000</PROTEIN>
+                <MAX_IN_BATCH>20.0000000</MAX_IN_BATCH>
+                <RECOMMEND_MASH>TRUE</RECOMMEND_MASH>
+                <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+                <DISPLAY_AMOUNT>1.00 kg</DISPLAY_AMOUNT>
+                <INVENTORY>1.00 kg</INVENTORY>
+                <POTENTIAL>1.0345000</POTENTIAL>
+                <DISPLAY_COLOR>60.0 EBC</DISPLAY_COLOR>
+                <EXTRACT_SUBSTITUTE></EXTRACT_SUBSTITUTE>
+            </FERMENTABLE>
+            <FERMENTABLE>
+                <NAME>Caravienne</NAME>
+                <VERSION>1</VERSION>
+                <TYPE>Grain</TYPE>
+                <AMOUNT>0.9999994</AMOUNT>
+                <YIELD>75.0000000</YIELD>
+                <COLOR>39.9999999</COLOR>
+                <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+                <ORIGIN>Belgium</ORIGIN>
+                <SUPPLIER>Dingemans</SUPPLIER>
+                <NOTES>En mellanljus karamellmalt som ger rik arom och smak och en intensiv lyster.</NOTES>
+                <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+                <MOISTURE>4.0000000</MOISTURE>
+                <DIASTATIC_POWER>120.0000000</DIASTATIC_POWER>
+                <PROTEIN>11.7000000</PROTEIN>
+                <MAX_IN_BATCH>15.0000000</MAX_IN_BATCH>
+                <RECOMMEND_MASH>TRUE</RECOMMEND_MASH>
+                <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+                <DISPLAY_AMOUNT>1.00 kg</DISPLAY_AMOUNT>
+                <INVENTORY>1.00 kg</INVENTORY>
+                <POTENTIAL>1.0345000</POTENTIAL>
+                <DISPLAY_COLOR>40.0 EBC</DISPLAY_COLOR>
+                <EXTRACT_SUBSTITUTE></EXTRACT_SUBSTITUTE>
+            </FERMENTABLE>
+            <FERMENTABLE>
+                <NAME>Caracrystal Wheat</NAME>
+                <VERSION>1</VERSION>
+                <TYPE>Grain</TYPE>
+                <AMOUNT>0.2999998</AMOUNT>
+                <YIELD>75.0000000</YIELD>
+                <COLOR>110.0000001</COLOR>
+                <ADD_AFTER_BOIL>FALSE</ADD_AFTER_BOIL>
+                <ORIGIN>U.S.</ORIGIN>
+                <SUPPLIER>Malt Magnus</SUPPLIER>
+                <NOTES></NOTES>
+                <COARSE_FINE_DIFF>1.5000000</COARSE_FINE_DIFF>
+                <MOISTURE>4.0000000</MOISTURE>
+                <DIASTATIC_POWER>120.0000000</DIASTATIC_POWER>
+                <PROTEIN>11.7000000</PROTEIN>
+                <MAX_IN_BATCH>5.0000000</MAX_IN_BATCH>
+                <RECOMMEND_MASH>TRUE</RECOMMEND_MASH>
+                <IBU_GAL_PER_LB>0.0000000</IBU_GAL_PER_LB>
+                <DISPLAY_AMOUNT>0.30 kg</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 kg</INVENTORY>
+                <POTENTIAL>1.0345000</POTENTIAL>
+                <DISPLAY_COLOR>110.0 EBC</DISPLAY_COLOR>
+                <EXTRACT_SUBSTITUTE></EXTRACT_SUBSTITUTE>
+            </FERMENTABLE>
+        </FERMENTABLES>
+
+        <MISCS>
+            <MISC>
+                <NAME>Gypsum (Calcium Sulfate)</NAME>
+                <VERSION>1</VERSION>
+                <TYPE>Water Agent</TYPE>
+                <USE>Mash</USE>
+                <AMOUNT>0.020425</AMOUNT>
+                <TIME>60.00</TIME>
+                <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+                <USE_FOR>Water Agent</USE_FOR>
+                <NOTES>Reduces PH of water for mashing and sparging.   Alters water profile -- used to harden soft water.  Use the BeerSmith Water Profile tool to determine amount to add.</NOTES>
+                <DISPLAY_AMOUNT>20.43 g</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 g</INVENTORY>
+                <DISPLAY_TIME>60.0 mins</DISPLAY_TIME>
+                <BATCH_SIZE>18.93 l</BATCH_SIZE>
+            </MISC>
+            <MISC>
+                <NAME>Epsom Salt (MgSO4)</NAME>
+                <VERSION>1</VERSION>
+                <TYPE>Water Agent</TYPE>
+                <USE>Mash</USE>
+                <AMOUNT>0.013863</AMOUNT>
+                <TIME>60.00</TIME>
+                <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+                <USE_FOR>Water Agent</USE_FOR>
+                <NOTES>Water agent used to modify water profile.  Use the BeerSmith Water Profile tool to determine amount to add.</NOTES>
+                <DISPLAY_AMOUNT>13.86 g</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 g</INVENTORY>
+                <DISPLAY_TIME>60.0 mins</DISPLAY_TIME>
+                <BATCH_SIZE>18.93 l</BATCH_SIZE>
+            </MISC>
+            <MISC>
+                <NAME>Salt</NAME>
+                <VERSION>1</VERSION>
+                <TYPE>Water Agent</TYPE>
+                <USE>Mash</USE>
+                <AMOUNT>0.002088</AMOUNT>
+                <TIME>60.00</TIME>
+                <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+                <USE_FOR>Water Agent</USE_FOR>
+                <NOTES>Table Salt (NaCl) may be used as a water mineral to adjust brewing water for mashing.</NOTES>
+                <DISPLAY_AMOUNT>2.09 g</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 g</INVENTORY>
+                <DISPLAY_TIME>60.0 mins</DISPLAY_TIME>
+                <BATCH_SIZE>18.93 l</BATCH_SIZE>
+            </MISC>
+            <MISC>
+                <NAME>MM Klar</NAME>
+                <VERSION>1</VERSION>
+                <TYPE>Fining</TYPE>
+                <USE>Boil</USE>
+                <AMOUNT>0.000013</AMOUNT>
+                <TIME>15.00</TIME>
+                <AMOUNT_IS_WEIGHT>TRUE</AMOUNT_IS_WEIGHT>
+                <USE_FOR></USE_FOR>
+                <NOTES></NOTES>
+                <DISPLAY_AMOUNT>12.50 mg</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 mg</INVENTORY>
+                <DISPLAY_TIME>15.0 mins</DISPLAY_TIME>
+                <BATCH_SIZE>20.00 l</BATCH_SIZE>
+            </MISC>
+            <MISC>
+                <NAME>Yeast Nutrient</NAME>
+                <VERSION>1</VERSION>
+                <TYPE>Other</TYPE>
+                <USE>Primary</USE>
+                <AMOUNT>0.013021</AMOUNT>
+                <TIME>4320.00</TIME>
+                <AMOUNT_IS_WEIGHT>FALSE</AMOUNT_IS_WEIGHT>
+                <USE_FOR>Fermentation</USE_FOR>
+                <NOTES>Gives yeast nutrients for healthy fermentation.  Not needed for most beers, but good for those with a high percentage of adjuncts.  Add before yeast.</NOTES>
+                <DISPLAY_AMOUNT>2.64 tsp</DISPLAY_AMOUNT>
+                <INVENTORY>0.00 tsp</INVENTORY>
+                <DISPLAY_TIME>3.0 days</DISPLAY_TIME>
+                <BATCH_SIZE>18.93 l</BATCH_SIZE>
+            </MISC>
+        </MISCS>
+
+
+        <WATERS>
+            <WATER>
+                <NAME>Randy Moshers Ideal Pale Ale</NAME>
+                <VERSION>1</VERSION>
+                <AMOUNT>50.0000000</AMOUNT>
+                <CALCIUM>110.0000000</CALCIUM>
+                <BICARBONATE>0.0000000</BICARBONATE>
+                <SULFATE>350.0000000</SULFATE>
+                <CHLORIDE>50.0000000</CHLORIDE>
+                <SODIUM>17.0000000</SODIUM>
+                <MAGNESIUM>18.0000000</MAGNESIUM>
+                <PH>8.2000000</PH>
+                <NOTES>Skr&#229;msta med en bra Pale Ale profil</NOTES>
+                <DISPLAY_AMOUNT>50.00 l</DISPLAY_AMOUNT>
+            </WATER>
+        </WATERS>
+
+        <STYLE>
+            <NAME>American IPA</NAME>
+            <VERSION>1</VERSION>
+            <CATEGORY>India Pale Ale (IPA)</CATEGORY>
+            <CATEGORY_NUMBER>14</CATEGORY_NUMBER>
+            <STYLE_LETTER>B</STYLE_LETTER>
+            <STYLE_GUIDE>BJCP 2008</STYLE_GUIDE>
+            <TYPE>Ale</TYPE>
+            <OG_MIN>1.0560000</OG_MIN>
+            <OG_MAX>1.0750000</OG_MAX>
+            <FG_MIN>1.0100000</FG_MIN>
+            <FG_MAX>1.0180000</FG_MAX>
+            <IBU_MIN>40.0000000</IBU_MIN>
+            <IBU_MAX>70.0000000</IBU_MAX>
+            <COLOR_MIN>11.8200000</COLOR_MIN>
+            <COLOR_MAX>29.5500000</COLOR_MAX>
+            <CARB_MIN>2.2000000</CARB_MIN>
+            <CARB_MAX>2.7000000</CARB_MAX>
+            <ABV_MAX>7.5000000</ABV_MAX>
+            <ABV_MIN>5.5000000</ABV_MIN>
+            <NOTES>A decidedly hoppy and bitter, moderately strong American pale ale. An American version of the historical English style, brewed using American ingredients and attitude.</NOTES>
+            <PROFILE>Aroma: A prominent to intense hop aroma with a citrusy, floral, perfume-like, resinous, piney, and/or fruity character derived from American hops. Many versions are dry hopped and can have an additional grassy aroma, although this is not required. Some clean malty sweetness may be found in the background, but should be at a lower level than in English examples. Fruitiness, either from esters or hops, may also be detected in some versions, although a neutral fermentation character is also acceptable. Some alcohol may be noted.
+                Appearance: Color ranges from medium gold to medium reddish copper; some versions can have an orange-ish tint. Should be clear, although unfiltered dry-hopped versions may be a bit hazy. Good head stand with white to off-white color should persist.
+                Flavor: Hop flavor is medium to high, and should reflect an American hop character with citrusy, floral, resinous, piney or fruity aspects. Medium-high to very high hop bitterness, although the malt backbone will support the strong hop character and provide the best balance. Malt flavor should be low to medium, and is generally clean and malty sweet although some caramel or toasty flavors are acceptable at low levels. No diacetyl. Low fruitiness is acceptable but not required. The bitterness may linger into the aftertaste but should not be harsh. Medium-dry to dry finish. Some clean alcohol flavor can be noted in stronger versions. Oak is inappropriate in this style. May be slightly sulfury, but most examples do not exhibit this character.
+                Mouthfeel: Smooth, medium-light to medium-bodied mouthfeel without hop-derived astringency, although moderate to medium-high carbonation can combine to render an overall dry sensation in the presence of malt sweetness. Some smooth alcohol warming can and should be sensed in stronger (but not all) versions. Body is generally less than in English counterparts.</PROFILE>
+            <INGREDIENTS>Pale ale malt (well-modified and suitable for single-temperature infusion mashing); American hops; American yeast that can give a clean or slightly fruity profile. Generally all-malt, but mashed at lower temperatures for high attenuation. Water character varies from soft to moderately sulfate. Versions with a noticeable Rye character (&#8220;RyePA&#8221;) should be entered in the Specialty category.</INGREDIENTS>
+            <EXAMPLES>Bell&#8217;s Two-Hearted Ale, AleSmith IPA, Russian River Blind Pig IPA, Stone IPA, Three Floyds Alpha King, Great Divide Titan IPA, Bear Republic Racer 5 IPA, Victory Hop Devil, Sierra Nevada Celebration Ale, Anderson Valley Hop Ottin&#8217;, Dogfish Head 60 Minute IPA, Founder&#8217;s Centennial IPA, Anchor Liberty Ale, Harpoon IPA, Avery IPA</EXAMPLES>
+            <DISPLAY_OG_MIN>1.056 SG</DISPLAY_OG_MIN>
+            <DISPLAY_OG_MAX>1.075 SG</DISPLAY_OG_MAX>
+            <DISPLAY_FG_MIN>1.010 SG</DISPLAY_FG_MIN>
+            <DISPLAY_FG_MAX>1.018 SG</DISPLAY_FG_MAX>
+            <DISPLAY_COLOR_MIN>11.8 EBC</DISPLAY_COLOR_MIN>
+            <DISPLAY_COLOR_MAX>29.6 EBC</DISPLAY_COLOR_MAX>
+            <OG_RANGE>1,056-1,075 SG</OG_RANGE>
+            <FG_RANGE>1,010-1,018 SG</FG_RANGE>
+            <IBU_RANGE>40,0-70,0 IBUs</IBU_RANGE>
+            <CARB_RANGE>2,20-2,70 Vols</CARB_RANGE>
+            <COLOR_RANGE>11,8-29,6 EBC</COLOR_RANGE>
+            <ABV_RANGE>5,50-7,50 %</ABV_RANGE>
+        </STYLE>
+
+        <EQUIPMENT>
+            <NAME>Camurri CB-50</NAME>
+            <VERSION>1</VERSION>
+            <BOIL_SIZE>64.0000000</BOIL_SIZE>
+            <BATCH_SIZE>50.0000000</BATCH_SIZE>
+            <TUN_VOLUME>70.0000000</TUN_VOLUME>
+            <TUN_WEIGHT>23.9999845</TUN_WEIGHT>
+            <TUN_SPECIFIC_HEAT>0.1200000</TUN_SPECIFIC_HEAT>
+            <TOP_UP_WATER>0.0000000</TOP_UP_WATER>
+            <TRUB_CHILLER_LOSS>6.0000000</TRUB_CHILLER_LOSS>
+            <EVAP_RATE>7.8125000</EVAP_RATE>
+            <BOIL_TIME>75.0000000</BOIL_TIME>
+            <CALC_BOIL_VOLUME>FALSE</CALC_BOIL_VOLUME>
+            <LAUTER_DEADSPACE>0.0000000</LAUTER_DEADSPACE>
+            <TOP_UP_KETTLE>0.0000000</TOP_UP_KETTLE>
+            <HOP_UTILIZATION>100.0000000</HOP_UTILIZATION>
+            <COOLING_LOSS_PCT>4.0000000</COOLING_LOSS_PCT>
+            <NOTES>&#34;Sparge&#34; with 1L 78C water per kg of grain.</NOTES>
+            <DISPLAY_BOIL_SIZE>64.00 l</DISPLAY_BOIL_SIZE>
+            <DISPLAY_BATCH_SIZE>50.00 l</DISPLAY_BATCH_SIZE>
+            <DISPLAY_TUN_VOLUME>70.00 l</DISPLAY_TUN_VOLUME>
+            <DISPLAY_TUN_WEIGHT>24.00 kg</DISPLAY_TUN_WEIGHT>
+            <DISPLAY_TOP_UP_WATER>0.00 l</DISPLAY_TOP_UP_WATER>
+            <DISPLAY_TRUB_CHILLER_LOSS>6.00 l</DISPLAY_TRUB_CHILLER_LOSS>
+            <DISPLAY_LAUTER_DEADSPACE>0.00 l</DISPLAY_LAUTER_DEADSPACE>
+            <DISPLAY_TOP_UP_KETTLE>0.00 l</DISPLAY_TOP_UP_KETTLE>
+        </EQUIPMENT>
+
+        <MASH>
+            <NAME>Single Infusion, Full Body</NAME>
+            <VERSION>1</VERSION>
+            <GRAIN_TEMP>22.2222222</GRAIN_TEMP>
+            <TUN_TEMP>22.2222222</TUN_TEMP>
+            <SPARGE_TEMP>75.5555556</SPARGE_TEMP>
+            <PH>5.4000000</PH>
+            <TUN_WEIGHT>846.5752320</TUN_WEIGHT>
+            <TUN_SPECIFIC_HEAT>0.1200000</TUN_SPECIFIC_HEAT>
+            <EQUIP_ADJUST>FALSE</EQUIP_ADJUST>
+            <NOTES>Simple single infusion mash for use with most modern well modified grains (about 95% of the time).</NOTES>
+            <DISPLAY_GRAIN_TEMP>22.2 C</DISPLAY_GRAIN_TEMP>
+            <DISPLAY_TUN_TEMP>22.2 C</DISPLAY_TUN_TEMP>
+            <DISPLAY_SPARGE_TEMP>75.6 C</DISPLAY_SPARGE_TEMP>
+            <DISPLAY_TUN_WEIGHT>24.00 kg</DISPLAY_TUN_WEIGHT>
+            <MASH_STEPS>
+                <MASH_STEP>
+                    <NAME>Mash In</NAME>
+                    <VERSION>1</VERSION>
+                    <TYPE>Infusion</TYPE>
+                    <INFUSE_AMOUNT>32.0784000</INFUSE_AMOUNT>
+                    <STEP_TIME>45.0000000</STEP_TIME>
+                    <STEP_TEMP>68.0000000</STEP_TEMP>
+                    <RAMP_TIME>2.0000000</RAMP_TIME>
+                    <END_TEMP>68.0000000</END_TEMP>
+                    <DESCRIPTION>Add 32,08 l of water at 74,7 C</DESCRIPTION>
+                    <WATER_GRAIN_RATIO>2,608 l/kg</WATER_GRAIN_RATIO>
+                    <DECOCTION_AMT>0.00 l</DECOCTION_AMT>
+                    <INFUSE_TEMP>74.7 C</INFUSE_TEMP>
+                    <DISPLAY_STEP_TEMP>68.0 C</DISPLAY_STEP_TEMP>
+                    <DISPLAY_INFUSE_AMT>32.08 l</DISPLAY_INFUSE_AMT>
+                </MASH_STEP>
+                <MASH_STEP>
+                    <NAME>Mash Out</NAME>
+                    <VERSION>1</VERSION>
+                    <TYPE>Infusion</TYPE>
+                    <INFUSE_AMOUNT>12.8311355</INFUSE_AMOUNT>
+                    <STEP_TIME>10.0000000</STEP_TIME>
+                    <STEP_TEMP>75.5555556</STEP_TEMP>
+                    <RAMP_TIME>2.0000000</RAMP_TIME>
+                    <END_TEMP>75.5555556</END_TEMP>
+                    <DESCRIPTION>Add 12,83 l of water at 97,2 C</DESCRIPTION>
+                    <WATER_GRAIN_RATIO>3,651 l/kg</WATER_GRAIN_RATIO>
+                    <DECOCTION_AMT>0.00 l</DECOCTION_AMT>
+                    <INFUSE_TEMP>97.2 C</INFUSE_TEMP>
+                    <DISPLAY_STEP_TEMP>75.6 C</DISPLAY_STEP_TEMP>
+                    <DISPLAY_INFUSE_AMT>12.83 l</DISPLAY_INFUSE_AMT>
+                </MASH_STEP>
+            </MASH_STEPS>
+
+        </MASH>
+
+        <NOTES></NOTES>
+        <TASTE_NOTES></TASTE_NOTES>
+        <TASTE_RATING>30.0000000</TASTE_RATING>
+        <OG>1.0560000</OG>
+        <FG>1.0100000</FG>
+        <CARBONATION>2.5000000</CARBONATION>
+        <FERMENTATION_STAGES>2</FERMENTATION_STAGES>
+        <PRIMARY_AGE>7.0000000</PRIMARY_AGE>
+        <PRIMARY_TEMP>18.0000000</PRIMARY_TEMP>
+        <SECONDARY_AGE>10.0000000</SECONDARY_AGE>
+        <SECONDARY_TEMP>21.0000000</SECONDARY_TEMP>
+        <TERTIARY_AGE>7.0000000</TERTIARY_AGE>
+        <AGE>14.0000000</AGE>
+        <AGE_TEMP>4.0000000</AGE_TEMP>
+        <CARBONATION_USED>Keg with 81,79 KPA</CARBONATION_USED>
+        <FORCED_CARBONATION>FALSE</FORCED_CARBONATION>
+        <PRIMING_SUGAR_NAME>Forced Carbonation</PRIMING_SUGAR_NAME>
+        <PRIMING_SUGAR_EQUIV>1.0000000</PRIMING_SUGAR_EQUIV>
+        <KEG_PRIMING_FACTOR>0.5000000</KEG_PRIMING_FACTOR>
+        <CARBONATION_TEMP>4.0000000</CARBONATION_TEMP>
+        <DISPLAY_CARB_TEMP>4.0 C</DISPLAY_CARB_TEMP>
+        <DATE>2015-03-26</DATE>
+        <EST_OG>1.061 SG</EST_OG>
+        <EST_FG>1.017 SG</EST_FG>
+        <EST_COLOR>18.2 EBC</EST_COLOR>
+        <IBU>60.6 IBUs</IBU>
+        <IBU_METHOD>Tinseth</IBU_METHOD>
+        <EST_ABV>5.8 %</EST_ABV>
+        <ABV>6.0 %</ABV>
+        <ACTUAL_EFFICIENCY>84.8 %</ACTUAL_EFFICIENCY>
+        <CALORIES>523.6 kcal/l</CALORIES>
+        <DISPLAY_BATCH_SIZE>50.00 l</DISPLAY_BATCH_SIZE>
+        <DISPLAY_BOIL_SIZE>64.00 l</DISPLAY_BOIL_SIZE>
+        <DISPLAY_OG>1.056 SG</DISPLAY_OG>
+        <DISPLAY_FG>1.010 SG</DISPLAY_FG>
+        <DISPLAY_PRIMARY_TEMP>18.0 C</DISPLAY_PRIMARY_TEMP>
+        <DISPLAY_SECONDARY_TEMP>21.0 C</DISPLAY_SECONDARY_TEMP>
+        <DISPLAY_TERTIARY_TEMP>18.3 C</DISPLAY_TERTIARY_TEMP>
+        <DISPLAY_AGE_TEMP>4.0 C</DISPLAY_AGE_TEMP>
+    </RECIPE>
+</RECIPES>

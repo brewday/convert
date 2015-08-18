@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Recipes" type="RecipesType"/>
+  <xs:complexType name="F_R_MASHType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="F_MH_NAME"/>
+      <xs:element type="xs:float" name="F_MH_GRAIN_WEIGHT"/>
+      <xs:element type="xs:float" name="F_MH_GRAIN_TEMP"/>
+      <xs:element type="xs:float" name="F_MH_BOIL_TEMP"/>
+      <xs:element type="xs:float" name="F_MH_TUN_TEMP"/>
+      <xs:element type="xs:float" name="F_MH_PH"/>
+      <xs:element type="xs:float" name="F_MH_SPARGE_TEMP"/>
+      <xs:element type="xs:byte" name="F_MH_BATCH"/>
+      <xs:element type="xs:float" name="F_MH_BATCH_PCT"/>
+      <xs:element type="xs:byte" name="F_MH_BATCH_EVEN"/>
+      <xs:element type="xs:byte" name="F_MH_BATCH_DRAIN"/>
+      <xs:element type="xs:byte" name="F_MASH_39"/>
+      <xs:element type="xs:float" name="F_MH_TUN_DEADSPACE"/>
+      <xs:element type="xs:float" name="F_MH_BIAB_VOL"/>
+      <xs:element type="xs:byte" name="F_MH_BIAB"/>
+      <xs:element type="xs:string" name="F_MH_NOTES"/>
+      <xs:element type="stepsType" name="steps"/>
+      <xs:element type="xs:byte" name="F_MH_EQUIP_ADJUST"/>
+      <xs:element type="xs:float" name="F_MH_TUN_VOL"/>
+      <xs:element type="xs:float" name="F_MH_TUN_MASS"/>
+      <xs:element type="xs:float" name="F_MH_TUN_HC"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MiscType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element name="F_H_NAME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Amarillo Gold"/>
+            <xs:enumeration value="Columbus (Tomahawk)"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="F_H_ORIGIN" minOccurs="0"/>
+      <xs:element name="F_H_TYPE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="F_H_FORM" minOccurs="0"/>
+      <xs:element name="F_H_ALPHA" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="8.5000000"/>
+            <xs:enumeration value="14.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_BETA" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="6.0000000"/>
+            <xs:enumeration value="5.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_PERCENT" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="6.9767445"/>
+            <xs:enumeration value="26.7441860"/>
+            <xs:enumeration value="39.5348836"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_H_INVENTORY" minOccurs="0"/>
+      <xs:element name="F_H_AMOUNT" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="1.0582189"/>
+            <xs:enumeration value="4.0565056"/>
+            <xs:enumeration value="5.9965735"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_HSI" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="20.0000000"/>
+            <xs:enumeration value="40.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_BOIL_TIME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="75.0000000"/>
+            <xs:enumeration value="15.0000000"/>
+            <xs:enumeration value="5.0000000"/>
+            <xs:enumeration value="0.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_H_DRY_HOP_TIME" minOccurs="0"/>
+      <xs:element name="F_H_NOTES" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Unknown origin, but character similar to Cascade.  Used for both bitterness and aroma.
+                            Used for: IPAs, Ales
+                            Aroma: Citrus, flowery
+                            Substitutes: Cascade, Centennial"/>
+            <xs:enumeration value="Engineered Centennial Substitute - High alpha bittering hops.
+                            Used for: Bittering, flavor, aroma - IPA, American Pale Ale, Stout, Lager
+                            Aroma: Pungent, spicy. Strongly aromatic, but clean tasting bitterness
+                            Substitutes: Centennial"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_IBU_CONTRIB" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="14.7082603"/>
+            <xs:enumeration value="24.7637103"/>
+            <xs:enumeration value="15.4773189"/>
+            <xs:enumeration value="0.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_NAME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Gypsum (Calcium Sulfate)"/>
+            <xs:enumeration value="Epsom Salt (MgSO4)"/>
+            <xs:enumeration value="Salt"/>
+            <xs:enumeration value="MM Klar"/>
+            <xs:enumeration value="Yeast Nutrient"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_TYPE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="4"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_USE_FOR" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Water Agent"/>
+            <xs:enumeration value=""/>
+            <xs:enumeration value="Fermentation"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_TEMP_VOL" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="640.0000000"/>
+            <xs:enumeration value="1690.6913913"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_UNITS" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="6"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_AMOUNT" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="20.4252219"/>
+            <xs:enumeration value="13.8628814"/>
+            <xs:enumeration value="2.0878432"/>
+            <xs:enumeration value="12.5000000"/>
+            <xs:enumeration value="2.6417053"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_VOLUME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="640.0000000"/>
+            <xs:enumeration value="676.2765565"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_M_INVENTORY" minOccurs="0"/>
+      <xs:element name="F_M_PRICE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="0.1000000"/>
+            <xs:enumeration value="1.0000000"/>
+            <xs:enumeration value="0.2500000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_USE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_TIME_UNITS" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_TIME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="60.0000000"/>
+            <xs:enumeration value="15.0000000"/>
+            <xs:enumeration value="3.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_NOTES" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Reduces PH of water for mashing and sparging.   Alters water profile -- used to harden soft water.  Use the BeerSmith Water Profile tool to determine amount to add."/>
+            <xs:enumeration value="Water agent used to modify water profile.  Use the BeerSmith Water Profile tool to determine amount to add."/>
+            <xs:enumeration value="Table Salt (NaCl) may be used as a water mineral to adjust brewing water for mashing."/>
+            <xs:enumeration value=""/>
+            <xs:enumeration value="Gives yeast nutrients for healthy fermentation.  Not needed for most beers, but good for those with a high percentage of adjuncts.  Add before yeast."/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="F_M_IMPORT_AS_WEIGHT" minOccurs="0"/>
+      <xs:element type="xs:byte" name="F_M_IMPORT_UNITS" minOccurs="0"/>
+      <xs:element name="F_ORDER">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="14"/>
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_USE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="4"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="F_H_IN_RECIPE" minOccurs="0"/>
+      <xs:element name="F_H_PRICE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="1.0000000"/>
+            <xs:enumeration value="22.3961233"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DataType">
+    <xs:choice maxOccurs="unbounded" minOccurs="0">
+      <xs:element type="MashStepType" name="MashStep"/>
+      <xs:element type="WaterType" name="Water"/>
+      <xs:element type="MiscType" name="Misc"/>
+      <xs:element type="GrainType" name="Grain"/>
+      <xs:element type="HopsType" name="Hops"/>
+      <xs:element type="RecipeType" name="Recipe"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="RecipeType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="F_R_NAME"/>
+      <xs:element type="xs:string" name="F_R_BREWER"/>
+      <xs:element type="xs:string" name="F_R_ASST_BREWER"/>
+      <xs:element type="xs:date" name="F_R_DATE"/>
+      <xs:element type="xs:date" name="F_R_INV_DATE"/>
+      <xs:element type="xs:string" name="F_R_FOLDER_NAME"/>
+      <xs:element type="xs:float" name="F_R_VOLUME_MEASURED"/>
+      <xs:element type="xs:float" name="F_R_FINAL_VOL_MEASURED"/>
+      <xs:element type="xs:byte" name="F_R_MASH_TIMER"/>
+      <xs:element type="xs:byte" name="F_R_BOIL_TIMER"/>
+      <xs:element type="xs:short" name="F_R_MTIMER_DOWN"/>
+      <xs:element type="xs:short" name="F_R_BTIMER_DOWN"/>
+      <xs:element type="xs:string" name="Image"/>
+      <xs:element type="xs:byte" name="F_R_IMAGE_X"/>
+      <xs:element type="xs:byte" name="F_R_IMAGE_Y"/>
+      <xs:element type="F_R_EQUIPMENTType" name="F_R_EQUIPMENT"/>
+      <xs:element type="F_R_STYLEType" name="F_R_STYLE"/>
+      <xs:element type="F_R_MASHType" name="F_R_MASH"/>
+      <xs:element type="F_R_BASE_GRAINType" name="F_R_BASE_GRAIN"/>
+      <xs:element type="F_R_CARBType" name="F_R_CARB"/>
+      <xs:element type="F_R_AGEType" name="F_R_AGE"/>
+      <xs:element type="IngredientsType" name="Ingredients"/>
+      <xs:element type="xs:byte" name="F_R_TYPE"/>
+      <xs:element type="xs:byte" name="F_R_OLD_TYPE"/>
+      <xs:element type="xs:byte" name="F_R_LOCKED"/>
+      <xs:element type="xs:float" name="F_R_OG_MEASURED"/>
+      <xs:element type="xs:float" name="F_R_FG_MEASURED"/>
+      <xs:element type="xs:float" name="F_R_OG_PRIMARY"/>
+      <xs:element type="xs:float" name="F_R_OG_SECONDARY"/>
+      <xs:element type="xs:float" name="F_R_BOIL_VOL_MEASURED"/>
+      <xs:element type="xs:float" name="F_R_OG_BOIL_MEASURED"/>
+      <xs:element type="xs:string" name="F_R_NOTES"/>
+      <xs:element type="xs:float" name="F_R_RATING"/>
+      <xs:element type="xs:string" name="F_R_DESCRIPTION"/>
+      <xs:element type="xs:float" name="F_R_CARB_VOLS"/>
+      <xs:element type="xs:float" name="F_R_MASH_PH"/>
+      <xs:element type="xs:float" name="F_R_RUNOFF_PH"/>
+      <xs:element type="xs:float" name="F_R_RUNNING_GRAVITY"/>
+      <xs:element type="xs:byte" name="F_R_GRAIN_STEEP_TIME"/>
+      <xs:element type="xs:float" name="F_R_GRAIN_STEEP_TEMP"/>
+      <xs:element type="xs:byte" name="F_R_INCLUDE_STARTER"/>
+      <xs:element type="xs:float" name="F_R_VERSION"/>
+      <xs:element type="xs:float" name="F_R_STARTER_SIZE"/>
+      <xs:element type="xs:byte" name="F_R_STIR_PLATE"/>
+      <xs:element type="xs:float" name="F_R_OLD_VOL"/>
+      <xs:element type="xs:float" name="F_R_OLD_BOIL_VOL"/>
+      <xs:element type="xs:float" name="F_R_OLD_EFFICIENCY"/>
+      <xs:element type="xs:float" name="F_R_DESIRED_IBU"/>
+      <xs:element type="xs:float" name="F_R_DESIRED_COLOR"/>
+      <xs:element type="xs:string" name="F_R_COLOR_ADJ_STRING"/>
+      <xs:element type="xs:float" name="F_R_DESIRED_OG"/>
+      <xs:element type="xs:byte" name="F_R_REBALANCE_SCALE"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="F_R_EQUIPMENTType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="F_E_NAME"/>
+      <xs:element type="xs:float" name="F_E_MASH_VOL"/>
+      <xs:element type="xs:float" name="F_E_TUN_MASS"/>
+      <xs:element type="xs:byte" name="F_E_BOIL_RATE_FLAG"/>
+      <xs:element type="xs:float" name="F_E_TUN_SPECIFIC_HEAT"/>
+      <xs:element type="xs:float" name="F_E_TUN_DEADSPACE"/>
+      <xs:element type="xs:byte" name="F_E_TUN_ADJ_DEADSPACE"/>
+      <xs:element type="xs:byte" name="F_E_CALC_BOIL"/>
+      <xs:element type="xs:float" name="F_E_BOIL_VOL"/>
+      <xs:element type="xs:float" name="F_E_BOIL_TIME"/>
+      <xs:element type="xs:float" name="F_E_OLD_EVAP_RATE"/>
+      <xs:element type="xs:byte" name="F_EQUIP_39"/>
+      <xs:element type="xs:float" name="F_E_BOIL_OFF"/>
+      <xs:element type="xs:float" name="F_E_TRUB_LOSS"/>
+      <xs:element type="xs:float" name="F_E_COOL_PCT"/>
+      <xs:element type="xs:float" name="F_E_TOP_UP_KETTLE"/>
+      <xs:element type="xs:float" name="F_E_BATCH_VOL"/>
+      <xs:element type="xs:float" name="F_E_FERMENTER_LOSS"/>
+      <xs:element type="xs:float" name="F_E_TOP_UP"/>
+      <xs:element type="xs:float" name="F_E_EFFICIENCY"/>
+      <xs:element type="xs:float" name="F_E_HOP_UTIL"/>
+      <xs:element type="xs:string" name="F_E_NOTES"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="WaterType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="F_W_NAME"/>
+      <xs:element type="xs:float" name="F_W_AMOUNT"/>
+      <xs:element type="xs:byte" name="F_W_IN_RECIPE"/>
+      <xs:element type="xs:float" name="F_W_PH"/>
+      <xs:element type="xs:float" name="F_W_CALCIUM"/>
+      <xs:element type="xs:float" name="F_W_MAGNESIUM"/>
+      <xs:element type="xs:float" name="F_W_SODIUM"/>
+      <xs:element type="xs:float" name="F_W_SULFATE"/>
+      <xs:element type="xs:float" name="F_W_CHLORIDE"/>
+      <xs:element type="xs:float" name="F_W_BICARB"/>
+      <xs:element type="xs:float" name="F_W_GYPSUM"/>
+      <xs:element type="xs:float" name="F_W_SALT"/>
+      <xs:element type="xs:float" name="F_W_EPSOM"/>
+      <xs:element type="xs:float" name="F_W_CACL"/>
+      <xs:element type="xs:float" name="F_W_SODA"/>
+      <xs:element type="xs:float" name="F_W_CHALK"/>
+      <xs:element type="xs:float" name="F_W_ADDITIONS_VOL"/>
+      <xs:element type="xs:string" name="F_W_NOTES"/>
+      <xs:element type="xs:byte" name="F_ORDER"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GrainType">
+    <xs:sequence>
+      <xs:element name="_MOD_">
+        <xs:simpleType>
+          <xs:restriction base="xs:date">
+            <xs:enumeration value="1970-01-01"/>
+            <xs:enumeration value="1979-01-02"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_G_NAME">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Maris Otter (Crisp)"/>
+            <xs:enumeration value="Caraamber"/>
+            <xs:enumeration value="Caravienne"/>
+            <xs:enumeration value="Caracrystal Wheat"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_G_ORIGIN">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="United Kingdom"/>
+            <xs:enumeration value="Germany"/>
+            <xs:enumeration value="Belgium"/>
+            <xs:enumeration value="U.S."/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_G_SUPPLIER">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="MaltMagnus.se"/>
+            <xs:enumeration value="Weyermann"/>
+            <xs:enumeration value="Dingemans"/>
+            <xs:enumeration value="Malt Magnus"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="F_G_TYPE"/>
+      <xs:element type="xs:byte" name="F_G_IN_RECIPE"/>
+      <xs:element name="F_G_INVENTORY">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="0.0000000"/>
+            <xs:enumeration value="35.2739680"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_G_AMOUNT">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="352.7396800"/>
+            <xs:enumeration value="35.2739680"/>
+            <xs:enumeration value="10.5821904"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_G_COLOR">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="2.7918782"/>
+            <xs:enumeration value="30.4568528"/>
+            <xs:enumeration value="20.3045685"/>
+            <xs:enumeration value="55.8375635"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_G_YIELD">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="82.5000000"/>
+            <xs:enumeration value="75.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_G_LATE_EXTRACT"/>
+      <xs:element name="F_G_PERCENT">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="81.3008130"/>
+            <xs:enumeration value="8.1300813"/>
+            <xs:enumeration value="2.4390244"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="F_G_NOT_FERMENTABLE"/>
+      <xs:element name="F_ORDER">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="6"/>
+            <xs:enumeration value="7"/>
+            <xs:enumeration value="8"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_G_COARSE_FINE_DIFF"/>
+      <xs:element name="F_G_MOISTURE">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="2.8000000"/>
+            <xs:enumeration value="4.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_G_DIASTATIC_POWER">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="50.0000000"/>
+            <xs:enumeration value="120.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_G_PROTEIN"/>
+      <xs:element type="xs:float" name="F_G_IBU_GAL_PER_LB"/>
+      <xs:element type="xs:byte" name="F_G_ADD_AFTER_BOIL"/>
+      <xs:element type="xs:byte" name="F_G_RECOMMEND_MASH"/>
+      <xs:element name="F_G_MAX_IN_BATCH">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="100.0000000"/>
+            <xs:enumeration value="20.0000000"/>
+            <xs:enumeration value="15.0000000"/>
+            <xs:enumeration value="5.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_G_NOTES">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Sorten Maris Otter ar framodlad av Dr GDH Bell i Cambridge genom att korsa Proctor och Pioneer korn. Maris Otter har odlats for maltning mer an 45 ar och dess stamtavla och meriter, levererar ar efter ar en konsekvent, bearbetbar och smakrik malt. Maris Otter anses vara Pale Ale maltens Rolls Royce."/>
+            <xs:enumeration value="Detta ar Weyermanns motsvarighet till &quot;Biscuit malt&quot;, som DeWolf-Cosyns tidigare tillverkade.
+                            Ger en vacker farg med dragning at rott till olet. Anvands upp till 20% av maltgivan."/>
+            <xs:enumeration value="En mellanljus karamellmalt som ger rik arom och smak och en intensiv lyster."/>
+            <xs:enumeration value=""/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_G_BOIL_TIME"/>
+      <xs:element name="F_G_PRICE">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="0.5386405"/>
+            <xs:enumeration value="0.8221355"/>
+            <xs:enumeration value="0.9922325"/>
+            <xs:enumeration value="0.6803880"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_G_CONVERT_GRAIN">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Pale Liquid Extract"/>
+            <xs:enumeration value=""/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="HopsType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element name="F_H_NAME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Amarillo Gold"/>
+            <xs:enumeration value="Columbus (Tomahawk)"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:string" name="F_H_ORIGIN" minOccurs="0"/>
+      <xs:element name="F_H_TYPE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="F_H_FORM" minOccurs="0"/>
+      <xs:element name="F_H_ALPHA" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="8.5000000"/>
+            <xs:enumeration value="14.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_BETA" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="6.0000000"/>
+            <xs:enumeration value="5.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_PERCENT" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="6.9767445"/>
+            <xs:enumeration value="26.7441860"/>
+            <xs:enumeration value="39.5348836"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_H_INVENTORY" minOccurs="0"/>
+      <xs:element name="F_H_AMOUNT" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="1.0582189"/>
+            <xs:enumeration value="4.0565056"/>
+            <xs:enumeration value="5.9965735"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_HSI" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="20.0000000"/>
+            <xs:enumeration value="40.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_BOIL_TIME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="75.0000000"/>
+            <xs:enumeration value="15.0000000"/>
+            <xs:enumeration value="5.0000000"/>
+            <xs:enumeration value="0.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_H_DRY_HOP_TIME" minOccurs="0"/>
+      <xs:element name="F_H_NOTES" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Unknown origin, but character similar to Cascade.  Used for both bitterness and aroma.
+                            Used for: IPAs, Ales
+                            Aroma: Citrus, flowery
+                            Substitutes: Cascade, Centennial"/>
+            <xs:enumeration value="Engineered Centennial Substitute - High alpha bittering hops.
+                            Used for: Bittering, flavor, aroma - IPA, American Pale Ale, Stout, Lager
+                            Aroma: Pungent, spicy. Strongly aromatic, but clean tasting bitterness
+                            Substitutes: Centennial"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_IBU_CONTRIB" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="14.7082603"/>
+            <xs:enumeration value="24.7637103"/>
+            <xs:enumeration value="15.4773189"/>
+            <xs:enumeration value="0.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_NAME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Gypsum (Calcium Sulfate)"/>
+            <xs:enumeration value="Epsom Salt (MgSO4)"/>
+            <xs:enumeration value="Salt"/>
+            <xs:enumeration value="MM Klar"/>
+            <xs:enumeration value="Yeast Nutrient"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_TYPE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="5"/>
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="4"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_USE_FOR" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Water Agent"/>
+            <xs:enumeration value=""/>
+            <xs:enumeration value="Fermentation"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_TEMP_VOL" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="640.0000000"/>
+            <xs:enumeration value="1690.6913913"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_UNITS" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="6"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_AMOUNT" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="20.4252219"/>
+            <xs:enumeration value="13.8628814"/>
+            <xs:enumeration value="2.0878432"/>
+            <xs:enumeration value="12.5000000"/>
+            <xs:enumeration value="2.6417053"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_VOLUME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="640.0000000"/>
+            <xs:enumeration value="676.2765565"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_M_INVENTORY" minOccurs="0"/>
+      <xs:element name="F_M_PRICE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="0.1000000"/>
+            <xs:enumeration value="1.0000000"/>
+            <xs:enumeration value="0.2500000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_USE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="1"/>
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_TIME_UNITS" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="2"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_TIME" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="60.0000000"/>
+            <xs:enumeration value="15.0000000"/>
+            <xs:enumeration value="3.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_M_NOTES" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Reduces PH of water for mashing and sparging.   Alters water profile -- used to harden soft water.  Use the BeerSmith Water Profile tool to determine amount to add."/>
+            <xs:enumeration value="Water agent used to modify water profile.  Use the BeerSmith Water Profile tool to determine amount to add."/>
+            <xs:enumeration value="Table Salt (NaCl) may be used as a water mineral to adjust brewing water for mashing."/>
+            <xs:enumeration value=""/>
+            <xs:enumeration value="Gives yeast nutrients for healthy fermentation.  Not needed for most beers, but good for those with a high percentage of adjuncts.  Add before yeast."/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="F_M_IMPORT_AS_WEIGHT" minOccurs="0"/>
+      <xs:element type="xs:byte" name="F_M_IMPORT_UNITS" minOccurs="0"/>
+      <xs:element name="F_ORDER">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="9"/>
+            <xs:enumeration value="11"/>
+            <xs:enumeration value="12"/>
+            <xs:enumeration value="13"/>
+            <xs:enumeration value="2"/>
+            <xs:enumeration value="3"/>
+            <xs:enumeration value="4"/>
+            <xs:enumeration value="10"/>
+            <xs:enumeration value="14"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_H_USE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:byte">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="4"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="F_H_IN_RECIPE" minOccurs="0"/>
+      <xs:element name="F_H_PRICE" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="1.0000000"/>
+            <xs:enumeration value="22.3961233"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="F_R_AGEType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="F_A_NAME"/>
+      <xs:element type="xs:float" name="F_A_PRIM_TEMP"/>
+      <xs:element type="xs:float" name="F_A_PRIM_END_TEMP"/>
+      <xs:element type="xs:float" name="F_A_SEC_TEMP"/>
+      <xs:element type="xs:float" name="F_A_SEC_END_TEMP"/>
+      <xs:element type="xs:float" name="F_A_TERT_TEMP"/>
+      <xs:element type="xs:float" name="F_A_AGE_TEMP"/>
+      <xs:element type="xs:float" name="F_A_TERT_END_TEMP"/>
+      <xs:element type="xs:float" name="F_A_END_AGE_TEMP"/>
+      <xs:element type="xs:byte" name="F_A_END_TEMPS_SET"/>
+      <xs:element type="xs:float" name="F_A_PRIM_DAYS"/>
+      <xs:element type="xs:float" name="F_A_SEC_DAYS"/>
+      <xs:element type="xs:float" name="F_A_TERT_DAYS"/>
+      <xs:element type="xs:float" name="F_A_AGE"/>
+      <xs:element type="xs:byte" name="F_A_TYPE"/>
+      <xs:element type="xs:string" name="F_A_NOTES"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="stepsType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="Name"/>
+      <xs:element type="xs:short" name="Type"/>
+      <xs:element type="xs:byte" name="Dirty"/>
+      <xs:element type="xs:byte" name="Owndata"/>
+      <xs:element type="xs:short" name="TID"/>
+      <xs:element type="xs:byte" name="Size"/>
+      <xs:element type="xs:string" name="_XName"/>
+      <xs:element type="xs:byte" name="Allocinc"/>
+      <xs:element type="DataType" name="Data"/>
+      <xs:element type="xs:byte" name="_TExpanded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="F_R_BASE_GRAINType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="F_G_NAME"/>
+      <xs:element type="xs:string" name="F_G_ORIGIN"/>
+      <xs:element type="xs:string" name="F_G_SUPPLIER"/>
+      <xs:element type="xs:byte" name="F_G_TYPE"/>
+      <xs:element type="xs:byte" name="F_G_IN_RECIPE"/>
+      <xs:element type="xs:float" name="F_G_INVENTORY"/>
+      <xs:element type="xs:float" name="F_G_AMOUNT"/>
+      <xs:element type="xs:float" name="F_G_COLOR"/>
+      <xs:element type="xs:float" name="F_G_YIELD"/>
+      <xs:element type="xs:float" name="F_G_LATE_EXTRACT"/>
+      <xs:element type="xs:float" name="F_G_PERCENT"/>
+      <xs:element type="xs:byte" name="F_G_NOT_FERMENTABLE"/>
+      <xs:element type="xs:byte" name="F_ORDER"/>
+      <xs:element type="xs:float" name="F_G_COARSE_FINE_DIFF"/>
+      <xs:element type="xs:float" name="F_G_MOISTURE"/>
+      <xs:element type="xs:float" name="F_G_DIASTATIC_POWER"/>
+      <xs:element type="xs:float" name="F_G_PROTEIN"/>
+      <xs:element type="xs:float" name="F_G_IBU_GAL_PER_LB"/>
+      <xs:element type="xs:byte" name="F_G_ADD_AFTER_BOIL"/>
+      <xs:element type="xs:byte" name="F_G_RECOMMEND_MASH"/>
+      <xs:element type="xs:float" name="F_G_MAX_IN_BATCH"/>
+      <xs:element type="xs:string" name="F_G_NOTES"/>
+      <xs:element type="xs:float" name="F_G_BOIL_TIME"/>
+      <xs:element type="xs:float" name="F_G_PRICE"/>
+      <xs:element type="xs:string" name="F_G_CONVERT_GRAIN"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecipesType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="Name"/>
+      <xs:element type="xs:short" name="Type"/>
+      <xs:element type="xs:byte" name="Dirty"/>
+      <xs:element type="xs:byte" name="Owndata"/>
+      <xs:element type="xs:byte" name="TID"/>
+      <xs:element type="xs:byte" name="Size"/>
+      <xs:element type="xs:string" name="_XName"/>
+      <xs:element type="xs:byte" name="Allocinc"/>
+      <xs:element type="DataType" name="Data"/>
+      <xs:element type="xs:byte" name="_TExpanded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="F_R_STYLEType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="F_S_NAME"/>
+      <xs:element type="xs:string" name="F_S_CATEGORY"/>
+      <xs:element type="xs:string" name="F_S_GUIDE"/>
+      <xs:element type="xs:byte" name="F_S_LETTER"/>
+      <xs:element type="xs:byte" name="F_S_NUMBER"/>
+      <xs:element type="xs:byte" name="F_S_TYPE"/>
+      <xs:element type="xs:float" name="F_S_MIN_OG"/>
+      <xs:element type="xs:float" name="F_S_MAX_OG"/>
+      <xs:element type="xs:float" name="F_S_MIN_FG"/>
+      <xs:element type="xs:float" name="F_S_MAX_FG"/>
+      <xs:element type="xs:float" name="F_S_MIN_IBU"/>
+      <xs:element type="xs:float" name="F_S_MAX_IBU"/>
+      <xs:element type="xs:float" name="F_S_MIN_CARB"/>
+      <xs:element type="xs:float" name="F_S_MAX_CARB"/>
+      <xs:element type="xs:float" name="F_S_MIN_COLOR"/>
+      <xs:element type="xs:float" name="F_S_MAX_COLOR"/>
+      <xs:element type="xs:float" name="F_S_MIN_ABV"/>
+      <xs:element type="xs:float" name="F_S_MAX_ABV"/>
+      <xs:element type="xs:string" name="F_S_DESCRIPTION"/>
+      <xs:element type="xs:string" name="F_S_PROFILE"/>
+      <xs:element type="xs:string" name="F_S_INGREDIENTS"/>
+      <xs:element type="xs:string" name="F_S_EXAMPLES"/>
+      <xs:element type="xs:anyURI" name="F_S_WEB_LINK"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MashStepType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element name="F_MS_NAME">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="Mash In"/>
+            <xs:enumeration value="Mash Out"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:byte" name="F_MS_TYPE"/>
+      <xs:element name="F_MS_INFUSION">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="1084.6934946"/>
+            <xs:enumeration value="433.8698064"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_MS_STEP_TEMP">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="154.4000000"/>
+            <xs:enumeration value="168.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="F_MS_STEP_TIME">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="45.0000000"/>
+            <xs:enumeration value="10.0000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_MS_RISE_TIME"/>
+      <xs:element type="xs:float" name="F_MS_TUN_ADDITION"/>
+      <xs:element type="xs:float" name="F_MS_TUN_HC"/>
+      <xs:element type="xs:float" name="F_MS_TUN_VOL"/>
+      <xs:element type="xs:float" name="F_MS_TUN_TEMP"/>
+      <xs:element type="xs:float" name="F_MS_TUN_MASS"/>
+      <xs:element name="F_MS_START_TEMP">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="0.0000000"/>
+            <xs:enumeration value="154.4000000"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_MS_GRAIN_TEMP"/>
+      <xs:element name="F_MS_START_VOL">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="0.0000000"/>
+            <xs:enumeration value="1084.6934946"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_MS_GRAIN_WEIGHT"/>
+      <xs:element name="F_MS_INFUSION_TEMP">
+        <xs:simpleType>
+          <xs:restriction base="xs:float">
+            <xs:enumeration value="166.4061272"/>
+            <xs:enumeration value="206.9546661"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element type="xs:float" name="F_MS_DECOCTION_AMT"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="F_R_CARBType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="F_C_NAME"/>
+      <xs:element type="xs:float" name="F_C_TEMPERATURE"/>
+      <xs:element type="xs:byte" name="F_C_TYPE"/>
+      <xs:element type="xs:string" name="F_C_PRIMER_NAME"/>
+      <xs:element type="xs:float" name="F_C_CARB_RATE"/>
+      <xs:element type="xs:string" name="F_C_NOTES"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IngredientsType">
+    <xs:sequence>
+      <xs:element type="xs:date" name="_MOD_"/>
+      <xs:element type="xs:string" name="Name"/>
+      <xs:element type="xs:short" name="Type"/>
+      <xs:element type="xs:byte" name="Dirty"/>
+      <xs:element type="xs:byte" name="Owndata"/>
+      <xs:element type="xs:short" name="TID"/>
+      <xs:element type="xs:byte" name="Size"/>
+      <xs:element type="xs:string" name="_XName"/>
+      <xs:element type="xs:byte" name="Allocinc"/>
+      <xs:element type="DataType" name="Data"/>
+      <xs:element type="xs:byte" name="_TExpanded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
