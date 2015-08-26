@@ -1,49 +1,49 @@
 package se.brewday.convert.beerxml;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import java.math.BigDecimal;
 
-@JsonRootName("HOP")
+@JacksonXmlRootElement(localName = "HOP")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Hop {
 
-    @JsonProperty("NAME")
+    @JacksonXmlProperty(localName = "NAME")
     private String name;
 
-    @JsonProperty("VERSION")
+    @JacksonXmlProperty(localName = "VERSION")
     private int version;
 
-    @JsonProperty("NOTES")
+    @JacksonXmlProperty(localName = "NOTES")
     private String notes;
 
-    @JsonProperty("ORIGIN")
+    @JacksonXmlProperty(localName = "ORIGIN")
     private String origin;
 
-    @JsonProperty("TYPE")
+    @JacksonXmlProperty(localName = "TYPE")
     private String type;
 
-    @JsonProperty("FORM")
+    @JacksonXmlProperty(localName = "FORM")
     private String form;
 
-    @JsonProperty("ALPHA")
+    @JacksonXmlProperty(localName = "ALPHA")
     private BigDecimal alpha;
 
-    @JsonProperty("BETA")
+    @JacksonXmlProperty(localName = "BETA")
     private BigDecimal beta;
 
-    @JsonProperty("HSI")
+    @JacksonXmlProperty(localName = "HSI")
     private BigDecimal hsi;
 
-    @JsonProperty("USE")
+    @JacksonXmlProperty(localName = "USE")
     private String use;
 
-    @JsonProperty("AMOUNT")
+    @JacksonXmlProperty(localName = "AMOUNT")
     private BigDecimal amount;
 
-    @JsonProperty("TIME")
+    @JacksonXmlProperty(localName = "TIME")
     private BigDecimal time;
 
     // DISPLAY_AMOUNT

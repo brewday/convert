@@ -1,66 +1,65 @@
 package se.brewday.convert.beerxml;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
-
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import java.math.BigDecimal;
 import java.util.List;
 
-@JsonRootName("RECIPE")
+@JacksonXmlRootElement(localName = "RECIPE")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Recipe {
 
-    @JsonProperty("NAME")
+    @JacksonXmlProperty(localName = "NAME")
     private String name;
 
-    @JsonProperty("VERSION")
+    @JacksonXmlProperty(localName = "VERSION")
     private int version;
 
-    @JsonProperty("TYPE")
+    @JacksonXmlProperty(localName = "TYPE")
     private String type;
 
-    @JsonProperty("BREWER")
+    @JacksonXmlProperty(localName = "BREWER")
     private String brewer;
 
-    @JsonProperty("ASST_BREWER")
+    @JacksonXmlProperty(localName = "ASST_BREWER")
     private String assistantBrewer;
 
-    @JsonProperty("BATCH_SIZE")
+    @JacksonXmlProperty(localName = "BATCH_SIZE")
     private BigDecimal batchSize;
 
-    @JsonProperty("BOIL_SIZE")
+    @JacksonXmlProperty(localName = "BOIL_SIZE")
     private BigDecimal boilSize;
 
-    @JsonProperty("BOIL_TIME")
+    @JacksonXmlProperty(localName = "BOIL_TIME")
     private BigDecimal boilTime;
 
-    @JsonProperty("EFFICIENCY")
+    @JacksonXmlProperty(localName = "EFFICIENCY")
     private BigDecimal efficiency;
 
 	//<editor-fold desc="Relations">
-	@JsonProperty("STYLE")
+	@JacksonXmlProperty(localName = "STYLE")
 	private Style style;
 
-	@JsonProperty("EQUIPMENT")
+	@JacksonXmlProperty(localName = "EQUIPMENT")
 	private Equipment equipment;
 
-	@JsonProperty("WATERS")
+	@JacksonXmlProperty(localName = "WATERS")
 	private List<Water> waters;
 
-    @JsonProperty("FERMENTABLES")
+    @JacksonXmlProperty(localName = "FERMENTABLES")
     private List<Fermentable> fermentables;
 
-	@JsonProperty("MASH")
+	@JacksonXmlProperty(localName = "MASH")
 	private Mash mash;
 
-	@JsonProperty("HOPS")
+	@JacksonXmlProperty(localName = "HOPS")
 	private List<Hop> hops;
 
-	@JsonProperty("YEASTS")
+	@JacksonXmlProperty(localName = "YEASTS")
 	private List<Yeast> yeasts;
 
-	@JsonProperty("MISCS")
+	@JacksonXmlProperty(localName = "MISCS")
 	private List<Misc> miscs;
 	//</editor-fold>
 

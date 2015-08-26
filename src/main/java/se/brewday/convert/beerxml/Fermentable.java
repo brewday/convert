@@ -1,71 +1,71 @@
 package se.brewday.convert.beerxml;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import se.brewday.convert.jsondeserializers.StringBooleanJsonDeserializer;
 
 import java.math.BigDecimal;
 
-@JsonRootName("FERMENTABLE")
+@JacksonXmlRootElement(localName = "FERMENTABLE")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Fermentable {
 
-    @JsonProperty("NAME")
+    @JacksonXmlProperty(localName = "NAME")
     private String name;
 
-    @JsonProperty("VERSION")
+    @JacksonXmlProperty(localName = "VERSION")
     private int version;
 
-    @JsonProperty("NOTES")
+    @JacksonXmlProperty(localName = "NOTES")
     private String notes;
 
-    @JsonProperty("TYPE")
+    @JacksonXmlProperty(localName = "TYPE")
     private String type;
 
-    @JsonProperty("AMOUNT")
+    @JacksonXmlProperty(localName = "AMOUNT")
     private BigDecimal amount;
 
-    @JsonProperty("YIELD")
+    @JacksonXmlProperty(localName = "YIELD")
     private BigDecimal yield;
 
-    @JsonProperty("COLOR")
+    @JacksonXmlProperty(localName = "COLOR")
     private BigDecimal color;
 
-    @JsonProperty("ADD_AFTER_BOIL")
+    @JacksonXmlProperty(localName = "ADD_AFTER_BOIL")
 	@JsonDeserialize(using = StringBooleanJsonDeserializer.class)
     private boolean addAfterBoil;
 
-    @JsonProperty("ORIGIN")
+    @JacksonXmlProperty(localName = "ORIGIN")
     private String origin;
 
-    @JsonProperty("SUPPLIER")
+    @JacksonXmlProperty(localName = "SUPPLIER")
     private String supplier;
 
-    @JsonProperty("COARSE_FINE_DIFF")
+    @JacksonXmlProperty(localName = "COARSE_FINE_DIFF")
     private BigDecimal courseFineDiff;
 
-    @JsonProperty("MOISTURE")
+    @JacksonXmlProperty(localName = "MOISTURE")
     private BigDecimal moisture;
 
-    @JsonProperty("DIASTATIC_POWER")
+    @JacksonXmlProperty(localName = "DIASTATIC_POWER")
     private BigDecimal diastaticPower;
 
-    @JsonProperty("PROTEIN")
+    @JacksonXmlProperty(localName = "PROTEIN")
     private BigDecimal protein;
 
-    @JsonProperty("MAX_IN_BATCH")
+    @JacksonXmlProperty(localName = "MAX_IN_BATCH")
     private BigDecimal maxInBatch;
 
-    @JsonProperty("RECOMMEND_MASH")
+    @JacksonXmlProperty(localName = "RECOMMEND_MASH")
 	@JsonDeserialize(using = StringBooleanJsonDeserializer.class)
     private boolean recommendMash;
 
-    @JsonProperty("IBU_GAL_PER_LB")
+    @JacksonXmlProperty(localName = "IBU_GAL_PER_LB")
     private BigDecimal ibuGalPerLB;
 
-    @JsonProperty("POTENTIAL")
+    @JacksonXmlProperty(localName = "POTENTIAL")
     private BigDecimal potential;
 
     // DISPLAY_AMOUNT

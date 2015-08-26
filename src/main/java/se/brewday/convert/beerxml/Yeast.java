@@ -1,74 +1,73 @@
 package se.brewday.convert.beerxml;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import se.brewday.convert.jsondeserializers.StringBooleanJsonDeserializer;
-
 import java.math.BigDecimal;
 
-@JsonRootName("YEAST")
+@JacksonXmlRootElement(localName = "YEAST")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Yeast {
 
-	@JsonProperty("NAME")
+	@JacksonXmlProperty(localName = "NAME")
 	private String name;
 
-	@JsonProperty("VERSION")
+	@JacksonXmlProperty(localName = "VERSION")
 	private int version;
 
-	@JsonProperty("NOTES")
+	@JacksonXmlProperty(localName = "NOTES")
 	private String notes;
 
-	@JsonProperty("AMOUNT")
+	@JacksonXmlProperty(localName = "AMOUNT")
 	private BigDecimal amount;
 
-	@JsonProperty("TYPE")
+	@JacksonXmlProperty(localName = "TYPE")
 	private String type;
 
-	@JsonProperty("FORM")
+	@JacksonXmlProperty(localName = "FORM")
 	private String form;
 
-	@JsonProperty("AMOUNT_IS_WEIGHT")
+	@JacksonXmlProperty(localName = "AMOUNT_IS_WEIGHT")
 	@JsonDeserialize(using = StringBooleanJsonDeserializer.class)
 	private boolean amountIsWeight;
 
-	@JsonProperty("LABORATORY")
+	@JacksonXmlProperty(localName = "LABORATORY")
 	private String laboratory;
 
-	@JsonProperty("PRODUCT_ID")
+	@JacksonXmlProperty(localName = "PRODUCT_ID")
 	private String productId;
 
-	@JsonProperty("MIN_TEMPERATURE")
+	@JacksonXmlProperty(localName = "MIN_TEMPERATURE")
 	private BigDecimal minTemperature;
 
-	@JsonProperty("MAX_TEMPERATURE")
+	@JacksonXmlProperty(localName = "MAX_TEMPERATURE")
 	private BigDecimal maxTemperature;
 
-	@JsonProperty("FLOCCULATION")
+	@JacksonXmlProperty(localName = "FLOCCULATION")
 	private String flocculation;
 
-	@JsonProperty("ATTENUATION")
+	@JacksonXmlProperty(localName = "ATTENUATION")
 	private BigDecimal attenuation;
 
-	@JsonProperty("BEST_FOR")
+	@JacksonXmlProperty(localName = "BEST_FOR")
 	private String bestFor;
 
-	@JsonProperty("MAX_REUSE")
+	@JacksonXmlProperty(localName = "MAX_REUSE")
 	private int maxReuse;
 
-	@JsonProperty("TIMES_CULTURED")
+	@JacksonXmlProperty(localName = "TIMES_CULTURED")
 	private int timesCultured;
 
-	@JsonProperty("ADD_TO_SECONDARY")
+	@JacksonXmlProperty(localName = "ADD_TO_SECONDARY")
 	@JsonDeserialize(using = StringBooleanJsonDeserializer.class)
 	private boolean addToSecondary;
 
-	@JsonProperty("INVENTORY")
+	@JacksonXmlProperty(localName = "INVENTORY")
 	private String inventory;
 
-	@JsonProperty("CULTURE_DATE")
+	@JacksonXmlProperty(localName = "CULTURE_DATE")
 	private String cultureDate;
 
 	// DISPLAY_AMOUNT

@@ -1,82 +1,81 @@
 package se.brewday.convert.beerxml;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
-
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import java.math.BigDecimal;
 
-@JsonRootName("STYLE")
+@JacksonXmlRootElement(localName = "STYLE")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Style {
 
-    @JsonProperty("NAME")
+    @JacksonXmlProperty(localName = "NAME")
     private String name;
 
-    @JsonProperty("VERSION")
+    @JacksonXmlProperty(localName = "VERSION")
     private int version;
 
-    @JsonProperty("NOTES")
+    @JacksonXmlProperty(localName = "NOTES")
     private String notes;
 
-    @JsonProperty("TYPE")
+    @JacksonXmlProperty(localName = "TYPE")
     private String type;
 
-    @JsonProperty("CATEGORY")
+    @JacksonXmlProperty(localName = "CATEGORY")
     private String category;
 
-    @JsonProperty("CATEGORY_NUMBER")
+    @JacksonXmlProperty(localName = "CATEGORY_NUMBER")
     private int categoryNumber;
 
-    @JsonProperty("STYLE_LETTER")
+    @JacksonXmlProperty(localName = "STYLE_LETTER")
     private String styleLetter;
 
-    @JsonProperty("STYLE_GUIDE")
+    @JacksonXmlProperty(localName = "STYLE_GUIDE")
     private String styleGuide;
 
-    @JsonProperty("PROFILE")
+    @JacksonXmlProperty(localName = "PROFILE")
     private String profile;
 
-    @JsonProperty("INGREDIENTS")
+    @JacksonXmlProperty(localName = "INGREDIENTS")
     private String ingredients;
 
-    @JsonProperty("EXAMPLES")
+    @JacksonXmlProperty(localName = "EXAMPLES")
     private String examples;
 
-    @JsonProperty("OG_MIN")
+    @JacksonXmlProperty(localName = "OG_MIN")
     private BigDecimal ogMin;
 
-    @JsonProperty("OG_MAX")
+    @JacksonXmlProperty(localName = "OG_MAX")
     private BigDecimal ogMax;
 
-    @JsonProperty("FG_MIN")
+    @JacksonXmlProperty(localName = "FG_MIN")
     private BigDecimal fgMin;
 
-    @JsonProperty("FG_MAX")
+    @JacksonXmlProperty(localName = "FG_MAX")
     private BigDecimal fgMax;
 
-    @JsonProperty("IBU_MIN")
+    @JacksonXmlProperty(localName = "IBU_MIN")
     private BigDecimal ibuMin;
 
-    @JsonProperty("IBU_MAX")
+    @JacksonXmlProperty(localName = "IBU_MAX")
     private BigDecimal ibuMax;
 
-    @JsonProperty("COLOR_MIN")
+    @JacksonXmlProperty(localName = "COLOR_MIN")
     private BigDecimal colorMin;
 
-    @JsonProperty("COLOR_MAX")
+    @JacksonXmlProperty(localName = "COLOR_MAX")
     private BigDecimal colorMax;
 
-    @JsonProperty("CARB_MIN")
+    @JacksonXmlProperty(localName = "CARB_MIN")
     private BigDecimal carbMin;
 
-    @JsonProperty("CARB_MAX")
+    @JacksonXmlProperty(localName = "CARB_MAX")
     private BigDecimal carbMax;
 
-    @JsonProperty("ABV_MAX")
+    @JacksonXmlProperty(localName = "ABV_MAX")
     private BigDecimal abvMax;
 
-    @JsonProperty("ABV_MIN")
+    @JacksonXmlProperty(localName = "ABV_MIN")
     private BigDecimal abvMin;
 
     // DISPLAY_OG_MIN

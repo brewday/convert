@@ -24,13 +24,14 @@ public class BeerXmlRecipe2CommonRecipe implements Converter<Recipe, se.brewday.
         r.setBoilSize(source.getBoilSize());
         r.setBoilTime(source.getBoilTime());
         r.setEfficiency(source.getEfficiency());
-        r.setStyle(conversionService.convert(source.getStyle(), se.brewday.convert.common.Style.class);
-        r.setEquipment(source.getEquipment());
-        r.setWaters(source.getWaters());
-        r.setFermentables(source.getFermentables());
-        r.setMash(source.getMash());
-        r.setHops(source.getHops());
-        r.setYeasts(source.getYeasts());
-        r.setMiscs(source.getMiscs());
+        //r.setStyle(conversionService.convert(source.getStyle(), se.brewday.convert.common.Style.class);
+        //r.setEquipment(source.getEquipment());
+        //r.setWaters(source.getWaters());
+        //r.setFermentables(source.getFermentables());
+        //r.setMash(source.getMash());
+        //r.setHops(source.getHops());
+        //r.setYeasts(source.getYeasts());
+        //r.setMiscs(source.getMiscs());
+		return null;
     }
 }

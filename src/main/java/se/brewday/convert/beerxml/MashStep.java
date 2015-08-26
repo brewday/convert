@@ -1,50 +1,48 @@
 package se.brewday.convert.beerxml;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
-
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import java.math.BigDecimal;
 
-@JsonRootName("MASH_STEP")
+@JacksonXmlRootElement(localName = "MASH_STEP")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class MashStep {
 
-	@JsonProperty("NAME")
+	@JacksonXmlProperty(localName = "NAME")
 	private String name; // Mash In
 
-	@JsonProperty("VERSION")
+	@JacksonXmlProperty(localName = "VERSION")
 	private int version; // 1
 
-	@JsonProperty("TYPE")
+	@JacksonXmlProperty(localName = "TYPE")
 	private String type; // Infusion
 
-	@JsonProperty("INFUSE_AMOUNT")
+	@JacksonXmlProperty(localName = "INFUSE_AMOUNT")
 	private BigDecimal infuseAmount; // 15.6477262
 
-	@JsonProperty("STEP_TIME")
+	@JacksonXmlProperty(localName = "STEP_TIME")
 	private BigDecimal stepTime; // 60.0000000
 
-	@JsonProperty("STEP_TEMP")
+	@JacksonXmlProperty(localName = "STEP_TEMP")
 	private BigDecimal stepTemp; // 66.6666667
 
-	@JsonProperty("RAMP_TIME")
+	@JacksonXmlProperty(localName = "RAMP_TIME")
 	private BigDecimal rampTime; // 2.0000000
 
-	@JsonProperty("END_TEMP")
+	@JacksonXmlProperty(localName = "END_TEMP")
 	private BigDecimal endTemp; // 66.6666667
 
-	@JsonProperty("DESCRIPTION")
+	@JacksonXmlProperty(localName = "DESCRIPTION")
 	private String description; // Add 15,65 l of water at 73,1 C
 
-	@JsonProperty("WATER_GRAIN_RATIO")
+	@JacksonXmlProperty(localName = "WATER_GRAIN_RATIO")
 	private String waterGrainRatio; // 2,608 l/kg
 
-	@JsonProperty("DECOCTION_AMT")
+	@JacksonXmlProperty(localName = "DECOCTION_AMT")
 	private String decoctionAmount; // 0.00 l
 
-	@JsonProperty("INFUSE_TEMP")
+	@JacksonXmlProperty(localName = "INFUSE_TEMP")
 	private String infuseTemp; // 73.1 C
 
 	// DISPLAY_STEP_TEMP

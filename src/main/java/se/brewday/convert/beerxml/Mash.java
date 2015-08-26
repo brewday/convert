@@ -1,50 +1,50 @@
 package se.brewday.convert.beerxml;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import se.brewday.convert.jsondeserializers.StringBooleanJsonDeserializer;
 
 import java.math.BigDecimal;
 import java.util.List;
 
-@JsonRootName("MASH")
+@JacksonXmlRootElement(localName = "MASH")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Mash {
 
-	@JsonProperty("NAME")
+	@JacksonXmlProperty(localName = "NAME")
 	private String name; // Single Infusion, Medium Body
 
-	@JsonProperty("VERSION")
+	@JacksonXmlProperty(localName = "VERSION")
 	private int version; // 1
 
-	@JsonProperty("NOTES")
+	@JacksonXmlProperty(localName = "NOTES")
 	private String notes; // Simple single infusion mash for use with most modern well modified grains (about 95% of the time).
 
-	@JsonProperty("GRAIN_TEMP")
+	@JacksonXmlProperty(localName = "GRAIN_TEMP")
 	private BigDecimal grainTemp; // 22.2222222
 
-	@JsonProperty("TUN_TEMP")
+	@JacksonXmlProperty(localName = "TUN_TEMP")
 	private BigDecimal tunTemp; // 22.2222222
 
-	@JsonProperty("SPARGE_TEMP")
+	@JacksonXmlProperty(localName = "SPARGE_TEMP")
 	private BigDecimal spargeTemp; // 75.5555556
 
-	@JsonProperty("PH")
+	@JacksonXmlProperty(localName = "PH")
 	private BigDecimal ph; // 5.4000000
 
-	@JsonProperty("TUN_WEIGHT")
+	@JacksonXmlProperty(localName = "TUN_WEIGHT")
 	private BigDecimal tunWeight; // 176.3698400
 
-	@JsonProperty("TUN_SPECIFIC_HEAT")
+	@JacksonXmlProperty(localName = "TUN_SPECIFIC_HEAT")
 	private BigDecimal tunSpecific_heat; // 0.1200000
 
-	@JsonProperty("EQUIP_ADJUST")
+	@JacksonXmlProperty(localName = "EQUIP_ADJUST")
 	@JsonDeserialize(using = StringBooleanJsonDeserializer.class)
 	private boolean equipAdjust; // FALSE
 
-	@JsonProperty("MASH_STEPS")
+	@JacksonXmlProperty(localName = "MASH_STEPS")
 	private List<MashStep> steps;
 
 	// DISPLAY_GRAIN_TEMP

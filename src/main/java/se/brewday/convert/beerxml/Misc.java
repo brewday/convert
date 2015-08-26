@@ -1,42 +1,41 @@
 package se.brewday.convert.beerxml;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import se.brewday.convert.jsondeserializers.StringBooleanJsonDeserializer;
-
 import java.math.BigDecimal;
 
-@JsonRootName("MISC")
+@JacksonXmlRootElement(localName = "MISC")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Misc {
 
-    @JsonProperty("NAME")
+    @JacksonXmlProperty(localName = "NAME")
     private String name;
 
-    @JsonProperty("VERSION")
+    @JacksonXmlProperty(localName = "VERSION")
     private int version;
 
-    @JsonProperty("NOTES")
+    @JacksonXmlProperty(localName = "NOTES")
     private String notes;
 
-    @JsonProperty("TYPE")
+    @JacksonXmlProperty(localName = "TYPE")
     private String type;
 
-    @JsonProperty("USE")
+    @JacksonXmlProperty(localName = "USE")
     private String use;
 
-    @JsonProperty("USE_FOR")
+    @JacksonXmlProperty(localName = "USE_FOR")
     private String useFor;
 
-    @JsonProperty("AMOUNT")
+    @JacksonXmlProperty(localName = "AMOUNT")
     private BigDecimal amount;
 
-    @JsonProperty("TIME")
+    @JacksonXmlProperty(localName = "TIME")
     private BigDecimal time;
 
-    @JsonProperty("AMOUNT_IS_WEIGHT")
+    @JacksonXmlProperty(localName = "AMOUNT_IS_WEIGHT")
 	@JsonDeserialize(using = StringBooleanJsonDeserializer.class)
     private boolean amountIsWeight;
 

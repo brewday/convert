@@ -1,12 +1,11 @@
 package se.brewday.convert.beerxml;
 
-import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
-
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
-@JsonRootName("RECIPES")
+@JacksonXmlRootElement(localName = "RECIPES")
 public class Recipes {
 
 	@JacksonXmlElementWrapper(useWrapping = false)

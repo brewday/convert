@@ -1,46 +1,46 @@
 package se.brewday.convert.beerxml;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonRootName;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
 
 import java.math.BigDecimal;
 
-@JsonRootName("WATER")
+@JacksonXmlRootElement(localName = "WATER")
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Water {
 
-    @JsonProperty("NAME")
+    @JacksonXmlProperty(localName = "NAME")
     private String name;
 
-    @JsonProperty("VERSION")
+    @JacksonXmlProperty(localName = "VERSION")
     private int version;
 
-    @JsonProperty("NOTES")
+    @JacksonXmlProperty(localName = "NOTES")
     private String notes;
 
-    @JsonProperty("AMOUNT")
+    @JacksonXmlProperty(localName = "AMOUNT")
     private BigDecimal amount;
 
-    @JsonProperty("PH")
+    @JacksonXmlProperty(localName = "PH")
     private BigDecimal ph;
 
-    @JsonProperty("CALCIUM")
+    @JacksonXmlProperty(localName = "CALCIUM")
     private BigDecimal calcium;
 
-    @JsonProperty("BICARBONATE")
+    @JacksonXmlProperty(localName = "BICARBONATE")
     private BigDecimal bicarbonate;
 
-    @JsonProperty("SULFATE")
+    @JacksonXmlProperty(localName = "SULFATE")
     private BigDecimal sulfate;
 
-    @JsonProperty("CHLORIDE")
+    @JacksonXmlProperty(localName = "CHLORIDE")
     private BigDecimal chloride;
 
-    @JsonProperty("SODIUM")
+    @JacksonXmlProperty(localName = "SODIUM")
     private BigDecimal sodium;
 
-    @JsonProperty("MAGNESIUM")
+    @JacksonXmlProperty(localName = "MAGNESIUM")
     private BigDecimal magnesium;
 
     // DISPLAY_AMOUNT
