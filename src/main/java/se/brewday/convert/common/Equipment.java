@@ -4,8 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonRootName;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import se.brewday.convert.jsondeserializers.BigDecimalJsonSerializer;
-import se.brewday.convert.jsondeserializers.StringBooleanJsonDeserializer;
+import se.brewday.convert.jsonadapters.DefaultBigDecimalJsonSerializer;
+import se.brewday.convert.jsonadapters.StringBooleanJsonDeserializer;
 
 import java.math.BigDecimal;
 
@@ -19,45 +19,45 @@ public class Equipment {
 
 	private String notes;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal boilSize;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal batchSize;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal tunVolume;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal tunWeight;
 
 	private BigDecimal tunSpecificHeat;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal topUpWater;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal trubChillerLoss;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal evaporationRate;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal boilTime;
 
 	@JsonDeserialize(using = StringBooleanJsonDeserializer.class)
 	private boolean calculateBoilVolume;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal lauterDeadspace;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal topUpKettle;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal hopUtilization;
 
-	@JsonSerialize(using = BigDecimalJsonSerializer.class)
+	@JsonSerialize(using = DefaultBigDecimalJsonSerializer.class)
 	private BigDecimal coolingLossPercentage;
 
 	// DISPLAY_BOIL_SIZE = 64.00 l

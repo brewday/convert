@@ -2,10 +2,13 @@ package se.brewday.convert.beerxml;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import se.brewday.convert.jsondeserializers.StringBooleanJsonDeserializer;
+import org.springframework.format.annotation.NumberFormat;
+import se.brewday.convert.jsonadapters.StringBooleanJsonDeserializer;
 import java.math.BigDecimal;
+import static se.brewday.convert.jsonadapters.BigDecimalJsonSerializer.*;
 
 @JacksonXmlRootElement(localName = "EQUIPMENT")
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -21,30 +24,38 @@ public class Equipment {
     private String notes;
 
     @JacksonXmlProperty(localName = "BOIL_SIZE")
+	@JsonSerialize(using = LiterSerializer.class)
     private BigDecimal boilSize;
 
     @JacksonXmlProperty(localName = "BATCH_SIZE")
+	@JsonSerialize(using = LiterSerializer.class)
     private BigDecimal batchSize;
 
     @JacksonXmlProperty(localName = "TUN_VOLUME")
+	@JsonSerialize(using = LiterSerializer.class)
     private BigDecimal tunVolume;
 
     @JacksonXmlProperty(localName = "TUN_WEIGHT")
+	@JsonSerialize(using = KilogramSerializer.class)
     private BigDecimal tunWeight;
 
     @JacksonXmlProperty(localName = "TUN_SPECIFIC_HEAT")
     private BigDecimal tunSpecificHeat;
 
     @JacksonXmlProperty(localName = "TOP_UP_WATER")
+	@JsonSerialize(using = LiterSerializer.class)
     private BigDecimal topUpWater;
 
     @JacksonXmlProperty(localName = "TRUB_CHILLER_LOSS")
+	@JsonSerialize(using = LiterSerializer.class)
     private BigDecimal trubChillerLoss;
 
     @JacksonXmlProperty(localName = "EVAP_RATE")
+	@JsonSerialize(using = PercentSerializer.class)
     private BigDecimal evaporationRate;
 
     @JacksonXmlProperty(localName = "BOIL_TIME")
+	@JsonSerialize(using = MinuteSerializer.class)
     private BigDecimal boilTime;
 
     @JacksonXmlProperty(localName = "CALC_BOIL_VOLUME")
@@ -52,15 +63,19 @@ public class Equipment {
     private boolean calculateBoilVolume;
 
     @JacksonXmlProperty(localName = "LAUTER_DEADSPACE")
+	@JsonSerialize(using = LiterSerializer.class)
     private BigDecimal lauterDeadspace;
 
     @JacksonXmlProperty(localName = "TOP_UP_KETTLE")
+	@JsonSerialize(using = LiterSerializer.class)
     private BigDecimal topUpKettle;
 
     @JacksonXmlProperty(localName = "HOP_UTILIZATION")
+	@JsonSerialize(using = PercentSerializer.class)
     private BigDecimal hopUtilization;
 
     @JacksonXmlProperty(localName = "COOLING_LOSS_PCT")
+	@JsonSerialize(using = PercentSerializer.class)
     private BigDecimal coolingLossPercentage;
 
     // DISPLAY_BOIL_SIZE = 64.00 l

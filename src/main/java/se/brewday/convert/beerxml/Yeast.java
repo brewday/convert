@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
-import se.brewday.convert.jsondeserializers.StringBooleanJsonDeserializer;
+import se.brewday.convert.jsonadapters.StringBooleanJsonDeserializer;
 import java.math.BigDecimal;
 
 @JacksonXmlRootElement(localName = "YEAST")

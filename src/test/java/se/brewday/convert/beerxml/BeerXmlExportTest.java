@@ -1,39 +1,54 @@
 package se.brewday.convert.beerxml;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
+import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
+import org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConverter;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
 import se.brewday.convert.ConvertApplication;
+
 import java.io.File;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @SpringApplicationConfiguration(classes = ConvertApplication.class)
 @WebAppConfiguration
 public class BeerXmlExportTest {
 
-    private XmlMapper xmlMapper = Jackson2ObjectMapperBuilder.xml().build();
-	private ObjectMapper jsonMapper = Jackson2ObjectMapperBuilder.json().build();
-	private ObjectMapper yamlMapper = new ObjectMapper(new YAMLFactory());
+	@Autowired
+	private ObjectMapper jsonMapper;
+
+	@Autowired
+	@Qualifier("xmlMapper")
+	private XmlMapper xmlMapper;
+
+	@Autowired
+	@Qualifier("yamlMapper")
+	private YAMLMapper yamlMapper;
+
 	private File exportDir;
 
 	@Before
 	public void before() {
-		Jackson2ObjectMapperBuilder yamlMapperBuilder = new Jackson2ObjectMapperBuilder();
-		yamlMapperBuilder.configure(yamlMapper);
-
 		exportDir = new File(System.getProperty("user.dir"), "export/beerxml");
 		exportDir.mkdirs();
 	}
@@ -66,7 +81,7 @@ public class BeerXmlExportTest {
 
 		File exportFile = new File(exportDir, "beer1.json");
 
-		jsonMapper.writeValue(exportFile, recipe);
+		jsonMapper.writerWithDefaultPrettyPrinter().writeValue(exportFile, recipe);
 
 		assertTrue("Export must exist", exportFile.exists());
 	}
@@ -83,6 +98,13 @@ public class BeerXmlExportTest {
 		yamlMapper.writeValue(exportFile, recipe);
 
 		assertTrue("Export must exist", exportFile.exists());
+	}
+
+	@Test
+	public void exportBigDecimal() throws JsonProcessingException {
+		BigDecimal d = new BigDecimal(50.5000234);
+		String s = jsonMapper.writerWithDefaultPrettyPrinter().writeValueAsString(d);
+		assertEquals("String should be 50.50", "50.5000", s);
 	}
 
     /*@Test
