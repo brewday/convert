@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container">
+      <form action="/" method="post" enctype="multipart/form-data">
+          <input class="form-control" type="file" name="file" value="Choose beerxml (.xml) or beersmith file (.bsmx)" />
+
+          <button class="btn btn-primary" type="submit">Convert</button>
+      </form>
+
+      #if($recipe)
+
+          <h1>$recipe.name</h1>
+
+          <div class="panel">
+              <h4 class="panel-heading">HTML</h4>
+              <div class="panel-body">
+                #parse("include/recipe.vm")
+              </div>
+          </div>
+
+          <div class="panel">
+              <h4 class="panel-heading">JSON</h4>
+              <div class="panel-body">
+                  <textarea class="form-control">
+                      $jsonRecipe
+                  </textarea>
+              </div>
+          </div>
+
+          <div class="panel">
+              <h4 class="panel-heading">YAML</h4>
+              <div class="panel-body">
+                  <textarea class="form-control">
+                      $yamlRecipe
+                  </textarea>
+              </div>
+          </div>
+      #end
+  </div>
+</body>
+</html>

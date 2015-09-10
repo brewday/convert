@@ -1,0 +1,90 @@
+<section>
+    name: $recipe.name
+    brewer: $recipe.brewer
+
+    <h3>Fermentables</h3>
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Name</th>
+            <th class="text-right">EBC</th>
+        </tr>
+        </thead>
+        <tbody>
+          #foreach($fermentable in $recipe.fermentables)
+            <tr>
+                <td>$number.format($fermentable.amount) kg</td>
+                <td>$fermentable.name</td>
+                <td class="text-right">
+                    <span class="ebc ebc-$number.integer($fermentable.color)">$number.format($fermentable.color)</span>
+                </td>
+            </tr>
+          #end
+        </tbody>
+    </table>
+
+    <h3>Mash</h3>
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Temp</th>
+            <th class="text-right">Time</th>
+        </tr>
+        </thead>
+        <tbody>
+          #foreach($step in $recipe.mash.steps)
+            <tr>
+                <td>$step.name</td>
+                <td>$number.format($step.stepTemp)&deg;</td>
+                <td class="text-right"><i class="fa fa-clock-o"></i> $number.format($step.stepTime) min</td>
+            </tr>
+          #end
+        </tbody>
+    </table>
+
+    <h3>Hops</h3>
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Name</th>
+            <th class="text-right">Time</th>
+            <th class="text-right">Alpha</th>
+            <th>Use</th>
+        </tr>
+        </thead>
+        <tbody>
+          #foreach($hops in $recipe.hops)
+            <tr>
+				#set($grams = $hops.amount * 1000)
+                <td>$number.format($grams) g</td>
+                <td>$hops.name</td>
+                <td class="text-right"><i class="fa fa-clock-o"></i> $number.format($hops.time) min</td>
+                <td class="text-right">$number.format($hops.alpha) %</td>
+                <td>$hops.use</td>
+            </tr>
+          #end
+        </tbody>
+    </table>
+
+    <h3>Yeast</h3>
+    <table class="table table-condensed">
+        <thead>
+        <tr>
+            <th>Amount</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+          #foreach($yeast in $recipe.yeasts)
+            <tr>
+                <td>$yeast.amount pkg</td>
+                <td>$yeast.name ($yeast.productId)</td>
+            </tr>
+          #end
+        </tbody>
+    </table>
+
+</section>

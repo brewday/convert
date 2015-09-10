@@ -1,3 +1,32 @@
 spring.application.name: convert
 
-spring.jackson.serialization.indentOutput: true
+server.port: 3000
+
+# Velocity
+spring.velocity:
+  dateToolAttribute: date
+  numberToolAttribute: number
+  #toolboxConfigLocation:toolbox.xml
+
+tools:
+  toolbox: 'request,application'
+  application:
+    convert: org.apache.velocity.tools.generic.ConversionTool
+    convert.dateFormat: 'yyyy-MM-dd'
+
+    math: org.apache.velocity.tools.generic.MathTool
+    display: org.apache.velocity.tools.generic.DisplayTool
+
+# JSON indent
+spring.jackson:
+  #mapper:
+  # Include the default properties from the views
+  #  defaultViewInclusion: true
+  serialization:
+    indentOutput: true
+    writeDatesAsTimestamps: false
+
+# Max upload size
+multipart:
+  maxFileSize: 2MB
+  maxRequestSize: 2MB
